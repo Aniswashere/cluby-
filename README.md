@@ -1,8 +1,8 @@
 # Cluby
 Developed by 
 Mahdibds
-Anis Mahmoud
-Aymen Cherni
+Anis Mahmoud <br />
+Aymen Cherni <br />
 
 ## Description 
 This is a app devloped used React Native, node.js. express.js and MongoDB
