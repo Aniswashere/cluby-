@@ -1,8 +1,9 @@
 import React from 'react';
-import Signup from './Signup' ;
+import Signup from './Signup';
 
 import { SafeAreaView, 
-          
+         View, 
+         Text, 
          Image, 
          StyleSheet, 
          Dimensions, 
@@ -24,16 +25,14 @@ export default function Login( {navigation}) {
                 <ScrollView style={{ flex: 1 }}
                 >
                     <Image
-        
-                        source={require('../../assets/expo-bg1.png')}
+                        source={require('../../assets/smu-220221-1.png')}
                         style={styles.logoStyle} />
                     <Input holder="Please enter your e-mail!" />
                     <Input holder="Please enter your password!" />
-                    <Button title='Login' onPress = {() => 
-                    navigation.navigate('MainTabs')} 
-                    />
+                    <Button title='Login' />
+    
                     <Button title="Sign Up" onPress ={() => 
-                       navigation.navigate('Signup')} 
+                       navigation.navigate('Signup')}
                     />
                 </ScrollView>
             </KeyboardAvoidingView>
@@ -49,7 +48,8 @@ const styles = StyleSheet.create({
         resizeMode: 'contain',
         width: Dimensions.get('window').width,
         height: Dimensions.get('window').height * .3,
+        tintColor: 'black',
         marginTop: 30,
-        marginBottom: 50,
+        marginBottom: 30,
     },
 })

@@ -5,8 +5,7 @@ import {
   View,
   TouchableOpacity,
   Image,
-  FlatList,
-  SafeAreaView
+  FlatList
 } from 'react-native';
 
 export default class Notifications extends Component {
@@ -15,10 +14,13 @@ export default class Notifications extends Component {
     super(props);
     this.state = {
       data:[
-        {id:3, image: "https://scontent.ftun9-1.fna.fbcdn.net/v/t39.30808-6/272195087_100448032550051_8046085808853722049_n.png?_nc_cat=108&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=C43vHRUrAVwAX_SMsoW&_nc_oc=AQmmO5cgRaiJP7oInKgrqBfV9GR5cNXn-IK5fWIQIUuzREd0bUP3SX1zW93I2NGJa_E&tn=MVg2-WvnpWb9nU2c&_nc_ht=scontent.ftun9-1.fna&oh=00_AT_7k3s3pTjQhGNaeZ4V5TMyJfwRkO3c5THuNrcR-TFRGw&oe=629C4174", name:"GenZ club",         text:"Hadhra event at SMU - 4th June", attachment:"https://via.placeholder.com/100x100/FFB6C1/000000"},
-        {id:2, image: "https://www.smu.tn/storage/app/uploads/public/3ad/60c/0ae/thumb__700_400_0_0_auto.png", name:"Libertad club",     text:"Basketball Tournament - 16th June", attachment:"https://via.placeholder.com/100x100/20B2AA/000000"},
-        {id:4, image: "https://scontent.ftun9-1.fna.fbcdn.net/v/t39.30808-6/272195087_100448032550051_8046085808853722049_n.png?_nc_cat=108&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=C43vHRUrAVwAX_SMsoW&_nc_oc=AQmmO5cgRaiJP7oInKgrqBfV9GR5cNXn-IK5fWIQIUuzREd0bUP3SX1zW93I2NGJa_E&tn=MVg2-WvnpWb9nU2c&_nc_ht=scontent.ftun9-1.fna&oh=00_AT_7k3s3pTjQhGNaeZ4V5TMyJfwRkO3c5THuNrcR-TFRGw&oe=629C4174", name:"GenZ CLUB",         text:"Art exhibition at SMU - 10th June", attachment:"https://via.placeholder.com/100x100/FFB6C1/000000"},
-        
+        {id:3, image: "https://bootdey.com/img/Content/avatar/avatar7.png", name:"March SoulLaComa", text:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.", attachment:"https://via.placeholder.com/100x100/FFB6C1/000000"},
+        {id:2, image: "https://bootdey.com/img/Content/avatar/avatar6.png", name:"John DoeLink",     text:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.", attachment:"https://via.placeholder.com/100x100/20B2AA/000000"},
+        {id:4, image: "https://bootdey.com/img/Content/avatar/avatar2.png", name:"Finn DoRemiFaso",  text:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.", attachment:""},
+        {id:5, image: "https://bootdey.com/img/Content/avatar/avatar3.png", name:"Maria More More",  text:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.", attachment:""},
+        {id:1, image: "https://bootdey.com/img/Content/avatar/avatar1.png", name:"Frank Odalthh",    text:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.", attachment:"https://via.placeholder.com/100x100/7B68EE/000000"},
+        {id:6, image: "https://bootdey.com/img/Content/avatar/avatar4.png", name:"Clark June Boom!", text:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.", attachment:""},
+        {id:7, image: "https://bootdey.com/img/Content/avatar/avatar5.png", name:"The googler",      text:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.", attachment:""},
       ]
     }
   }
@@ -47,7 +49,6 @@ export default class Notifications extends Component {
             attachment = <Image style={styles.attachment} source={{uri:Notification.attachment}}/>
           }
           return(
-            <SafeAreaView>
             <View style={styles.container}>
               <Image source={{uri:Notification.image}} style={styles.avatar}/>
               <View style={styles.content}>
@@ -63,7 +64,6 @@ export default class Notifications extends Component {
                 {attachment}
               </View>
             </View>
-           </SafeAreaView>
           );
         }}/>
     );

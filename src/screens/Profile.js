@@ -14,14 +14,17 @@ export default class Profile extends Component {
       <View style={styles.container}>
           <View style={styles.header}></View>
           <Image style={styles.avatar} source={{uri: 'https://bootdey.com/img/Content/avatar/avatar6.png'}}/>
-         
-              <Text style={styles.info}>  </Text>
-              <Text style={styles.info}> Firstname, Lastname </Text>
-              <Text style={styles.info}> e-mail </Text>
           <View style={styles.body}>
+            <View style={styles.bodyContent}>
+              <Text style={styles.name}>Club </Text>
+              <Text style={styles.info}>Clubs in SMU</Text>
+              <Text style={styles.description}></Text>
+              
               <TouchableOpacity style={styles.buttonContainer}>
-                <Text> CV </Text>  
-              </TouchableOpacity>     
+                <Text>Recruitement form</Text>  
+              </TouchableOpacity>              
+              
+            </View>
         </View>
       </View>
     );
@@ -37,7 +40,7 @@ const styles = StyleSheet.create({
     width: 130,
     height: 130,
     borderRadius: 63,
-    borderWidth: 1,
+    borderWidth: 4,
     borderColor: "white",
     marginBottom:10,
     alignSelf:'center',
@@ -46,25 +49,26 @@ const styles = StyleSheet.create({
   },
   name:{
     fontSize:22,
-    color:"black",
+    color:"#FFFFFF",
     fontWeight:'600',
   },
   body:{
+    marginTop:40,
+  },
+  bodyContent: {
     flex: 1,
     alignItems: 'center',
     padding:30,
   },
-  
   name:{
     fontSize:28,
-    color: "black",
+    color: "#696969",
     fontWeight: "600"
   },
   info:{
     fontSize:16,
-    textAlign: 'center',
-    color: "#000000",
-    marginTop:30
+    color: "#00BFFF",
+    marginTop:10
   },
   description:{
     fontSize:16,

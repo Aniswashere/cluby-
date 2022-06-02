@@ -31,7 +31,6 @@ const Main = () => {
     >
       <MainStack.Screen name="Login" component={login} />
       <MainStack.Screen name ="Signup" component ={Signup} />
-      <MainStack.Screen name ="MainTabs" component ={MainTabs} />
       
     </MainStack.Navigator>
   );
@@ -51,27 +50,18 @@ const MainTabs = () => {
       }}
     >
       {/* these icons using Ionicons */}
-      
       <Tabs.Screen
-        name="Home"
-        component={Home}
+        name="login"
+        component={login}
         options={{
-        
           tabBarLabel: ({ focused }) => (
-            <TabBarText focused={focused} title="Home" />
+            <TabBarText focused={focused} title="login" />
           ),
           tabBarIcon: ({ focused }) => (
-            <TabBarIcon focused={focused} icon={"md-home"} />
-            
+            <TabBarIcon focused={focused} icon={"person"} />
           ),
-          headerStyle:{
-            backgroundColor:"red",
-          },
-          headerTransparent:true,
-          headerTintColor: colors.primary,
-          
         }}
-      /> 
+      />
       <Tabs.Screen
         name="Profile"
         component={Profile}
@@ -98,7 +88,26 @@ const MainTabs = () => {
         }}
       />
    
-      
+      <Tabs.Screen
+        name="Home"
+        component={Home}
+        options={{
+        
+          tabBarLabel: ({ focused }) => (
+            <TabBarText focused={focused} title="Home" />
+          ),
+          tabBarIcon: ({ focused }) => (
+            <TabBarIcon focused={focused} icon={"md-home"} />
+            
+          ),
+          headerStyle:{
+            backgroundColor:"red",
+          },
+          headerTransparent:true,
+          headerTintColor: colors.primary,
+          
+        }}
+      />
     
       <Tabs.Screen
         name="Notifications"
